@@ -100,7 +100,7 @@ Pour la réalisation du TP, vous devez respecter les directives suivantes.
   Ce format est appelé [Berkeley Packet Filter](https://fr.wikipedia.org/wiki/BSD_Packet_Filter). Une référence à la structure `sock_fprog` est donnée en troisième argument à `prctl`.
   - Pour construire votre structure `sock_filter` (vos instructions machine vous aurez besoin des macros `BPF_STMT` et `BPF_JUMP`.
   - L'ensemble des instructions machine (combinable avec des **ou binaires**) dont vous aurez besoin sont,
-    - `BPF_L` pour charger des mots dans un registre,
+    - `BPF_LD` pour charger des mots dans un registre,
     - `BPF_W` pour indiquer que c'est un mot mémoire qui sera chargé,
     - `BPF_ABS` pour indiqué un décalage (_offset_) fixe,
     - `BPF_JMP` combiné à `BPF_JEQ` pour vérifier une condition d'égalité (il existe aussi d'autres types de comparaisons),
